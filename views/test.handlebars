@@ -1,0 +1,100 @@
+
+<div class="layouts">
+	<h3>Layout: </h3>
+	<button id="qwerty">
+		<a href="/test?layout=qwerty" >
+			QWERTY
+		</a>
+
+	</button>
+	<button id="dvorak">
+		<a href="/test?layout=dvorak">
+			DVORAK
+		</a>
+	</button>
+	<button id="colemak">
+		<a href="/test?layout=colemak">
+			COLEMAK
+		</a>
+	</button>
+	<button id="dvorak_r">
+		<a href="/test?layout=dvorak_r">
+			DVORAK RIGHT
+		</a>
+	</button>
+	
+</div>
+
+<div class="container"> 
+	{{#if message}}
+		<div class="message">Sorry, there are no real words with these letters. So these are just some random arrangements of letters.</div>
+	{{/if}}
+	<div class="words_container" style="{{style}}">
+
+		{{#each matches as |match index|}}
+				<span>
+					{{#each match as |letter index|~}}
+						<span>{{letter}}</span>
+					{{~/each}}
+					<span> </span>
+				</span>
+		{{/each}}
+	</div>
+
+	<input class="input_container" type="text" autofocus id="input">
+		
+	</input>
+
+	<div class="keyboard-layout" id="keyboard-layout">
+			{{#each layout_keys  as | keys index|}}
+				<div class="row-{{index}}">
+					{{#each keys }}
+						<div id={{this}}>{{this}}</div>
+					{{/each}}
+				</div>
+			{{/each}}
+			<div id=" ">
+			</div>
+		
+	</div> 
+	
+</div>
+<div id="k_layout" hidden="true">{{k_layout}}</div>
+
+<div class="results">
+	<div class="horizontal">
+		<h4> Accuracy  </h4><p class="value" id="accuracy">50%</p>
+	</div>
+	
+	<div class="horizontal">
+		<h4> Speed  </h4><p class="value" id="speed">40 wpm</p>
+	</div>
+	
+	<div class="horizontal">
+		<h4> Time  </h4><p class="value" id="time"></p>
+	</div>
+	
+	<div class="horizontal">
+		<a onClick="location.reload()"> Repeat </a><a id="next"> Next </a>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	
+	var layout=window.location.href.split("=");
+	if(layout.length!=1)
+		layout= layout[layout.length-1];
+	else
+		layout= "qwerty";
+	document.getElementById(layout).style.backgroundColor="#87ceeb";
+	
+	
+	
+</script>
+
+<audio src="/sounds/incorrect.wav" autostart="false" width="0" height="0" id="incorrect"
+enablejavascript="true"></audio>
+
+<link rel="stylesheet" href="/css/learn.css"/>
+<script type="text/javascript" src="/js/learn2.js"></script>

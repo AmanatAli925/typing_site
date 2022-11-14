@@ -1,0 +1,19 @@
+div.wrapper{
+	width: 50%;
+	margin: auto;
+	padding: 2rem;
+}
+
+form.enter-code{
+	margin: 2rem 0;
+}
+
+a.send-again{
+	cursor: pointer;
+}
+
+footer.page-footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}

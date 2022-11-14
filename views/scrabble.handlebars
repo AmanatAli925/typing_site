@@ -1,0 +1,39 @@
+<div class="wrapper">
+	<div class="letters_form">
+		<form action="/scrabble" method="GET">
+			<input type="text" name="letters" id="letter" placeholder="Enter the letters"></input>
+			<button type="submit"> Search </button>
+		</form>
+	</div>
+	<div class="words-container">
+		{{#each words}}
+			<div>{{this}}</div>
+		{{/each}}
+	</div>
+</div>
+
+
+<style>
+	.wrapper{
+		width: 50%;
+		margin: auto;
+		margin-top: 2rem;
+	}
+	.letters_form input{
+		width: 80%;
+	}
+
+	
+
+	.words-container{
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		margin-top: 2rem;
+		
+	}
+	.words-container div{
+		padding: .5rem;
+		border: 1px solid black;
+	}
+</style>
+

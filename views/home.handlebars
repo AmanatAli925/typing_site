@@ -1,0 +1,78 @@
+
+
+
+<div class="layouts">
+	<h3>Layout: </h3>
+	<button id="qwerty">
+		<a href="/" >
+			QWERTY
+		</a>
+
+	</button>
+	<button id="dvorak">
+		<a href="?layout=dvorak">
+			DVORAK
+		</a>
+	</button>
+	<button id="colemak">
+		<a href="?layout=colemak">
+			COLEMAK
+		</a>
+		
+	</button>
+	
+	<button id="dvorak_r">
+		<a href="?layout=dvorak_r">
+			DVORAK RIGHT
+		</a>
+		
+	</button>
+	
+</div>
+<div class="form-container">
+	<div class="keys-form">
+			<label for="keys">Keys to Learn </label>
+			<input placeholder="i.e zxcvbnm" name="keys" id="keys"/>
+			<button onClick="get_lessons()"> Get Lessons </button>
+	</div>
+	<p class="text">OR use pattern provided below</p>
+</div>
+
+<a class="lesson" href="/fingers-placement">
+	<p>Fingers Placement</p>
+</a>
+{{#each tags}}
+	{{#is_done ../session.user.finished_lessons this.keys ../k_layout }}
+		<link rel="canonical" href="/learn-typing/{{../k_layout}}/{{this.keys}}">
+		<a class="lesson" style="background-color: #aebfb3" href="/learn-typing/{{../k_layout}}/{{this.keys}}">
+			<p>{{this.title}}</p>
+		</a>
+	{{else}}
+		<link rel="canonical" href="/learn-typing/{{../k_layout}}/{{this.keys}}">
+		<a class="lesson" href="/learn-typing/{{../k_layout}}/{{this.keys}}">
+			<p>{{this.title}}</p>
+		</a>
+	{{/is_done}}
+{{/each}}
+
+
+
+<script type="text/javascript">
+	
+	var layout=window.location.href.split("=");
+	if(layout.length!=1)
+		layout= layout[layout.length-1];
+	else
+		layout= "qwerty";
+	document.getElementById(layout).style.backgroundColor="#87ceeb";
+	
+	
+	function get_lessons(){
+		const keys  = document.getElementById('keys').value
+		const newLoc= window.location.href.split('?')[0]+'learn-typing/'+layout+'/'+keys;
+		window.location.href=newLoc;
+	}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

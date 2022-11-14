@@ -1,0 +1,38 @@
+.form{
+	
+	
+}
+
+.field{
+	display:grid;
+	grid-template-columns: 8rem 1fr;
+	align-items: center;
+	padding: 1rem 0;
+
+}
+.field label{
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 100;
+}
+
+
+.form-wrapper{
+	display: block;
+	width: 40%;
+	margin:auto;
+}
+
+div.error_msg{
+	color: red;
+	margin-top: 1rem;
+}
+
+
+.page-footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+

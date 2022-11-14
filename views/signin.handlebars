@@ -1,0 +1,23 @@
+<div class="form-wrapper">
+	<div class="error_msg">{{error_msg}}</div>
+	<div class="success_msg"> {{ success_msg }} </div>
+	<form class="form" role="form" action="/forms-handling/sign-in" method="POST">
+		<div class="field">
+			<label for="email">Email</label>
+			<input type="email" required="true" id="email" name="email"/> 
+			
+		</div>
+		<div class="field">
+			<label for="password" >Password</label>
+			<input type="password" required="true" id="password" name="password"/> 
+		</div>
+		<div class="field">
+			<button type="submit">Sign in</button>
+		</div>
+		<a href="/enter-email">Forgot password?</a>
+		
+	<form/>
+	
+</div>
+
+<link href="/css/signin.css" rel="stylesheet">

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="{{description}}" />
+    <meta name="keywords" content="Typing , Dvorak, Qwerty, Learn, Colemak, touchtyping"/>
+	{{#if noindex}}
+		<meta name="robots" content="noindex"/>
+	{{/if}}
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="/css/home.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+	<header class="d-flex justify-content-center py-3 header">
+	  <ul class="nav nav-pills">
+		<li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+		
+		<li class="nav-item"><a href="/test?layout=qwerty" class="nav-link active" aria-current="page">Typing Test</a></li>
+		<li class="nav-item"><a href="/crossword-puzzle-solver" class="nav-link">Crossword Solver</a></li>
+		<li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+		
+	  </ul>
+	  <ul  class="nav nav-pills acc_settings">
+		{{#if session.user}}
+			<li class="nav-item"><a href="/forms-handling/sign-out" class="nav-link">Sign Out</a></li>
+		{{else}}
+			<li class="nav-item"><a href="/sign-in" class="nav-link">Sign In</a></li>
+			<li class="nav-item"><a href="/sign-up" class="nav-link">Sign Up</a></li>
+		{{/if}}
+	  </ul>
+	</header>
+    {{{body}}}
+	<!-- Footer -->
+	<footer class="page-footer" >
+
+	  <!-- Footer Links -->
+	  <div class="footer-row">
+		  <!-- Grid column -->
+		  <div class="footer-content" >
+
+			<!-- Content -->
+			<h5 class="text-uppercase">Typing Tutor</h5>
+			<p>
+				This website allows you to learn typing by using real words.
+				That you will be using often in future. It helps you improve speed.
+			</p>
+
+		  </div>
+		  <!-- Grid column -->
+
+
+		  <!-- Grid column -->
+		  <div class="footer-links">
+			<h5 class="text-uppercase">Links</h5>
+			<ul >
+			  <li>
+				<a href="/about">About</a>
+			  </li>
+			  <li>
+				<a href="/contact">Contact</a>
+			  </li>
+			 
+			  </li>
+			</ul>
+
+		  </div>
+		  <!-- Grid column -->
+
+	  </div>
+	  <!-- Footer Links -->
+
+	  <!-- Copyright -->
+	  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+		<a href="http://touchtyping.website"> touchtyping.website</a>
+	  </div>
+	  <!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+  </body>
+</html>

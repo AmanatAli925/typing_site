@@ -1,0 +1,24 @@
+<div class="form-wrapper">
+	<div class="error_msg">{{{error_msg}}}</div>
+	<form class="form" role="form" action="/forms-handling/sign-up" method="POST">
+		<div class="field">
+			<label for="username">Username</label>
+			<input type="text" required="true" id="username" name="username"/> 
+			
+		</div>
+		<div class="field">
+			<label for="email">Email</label>
+			<input type="email" required="true" id="email" name="email"/> 
+			
+		</div>
+		<div class="field">
+			<label for="password">Password</label>
+			<input type="password" required="true" id="password" name="password"/> 
+		</div>
+		<div class="field">
+			<button type="submit">Sign Up</button>
+		</div>
+	<form/>
+</div>
+
+<link href="/css/signin.css" rel="stylesheet">

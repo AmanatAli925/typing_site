@@ -1,0 +1,114 @@
+body{
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+
+
+
+}
+
+.error-msg{
+	color: red ;
+}
+
+.success-msg{
+	color: green ;
+}
+
+.header{
+	background-color: #f0f0f0;
+	margin-bottom: 2rem;
+	margin: 0;
+	display: flex;
+	padding: 1.5rem;
+}
+
+
+.acc_settings{
+	float:right;
+	margin-left: auto;
+}
+
+.layouts{
+	width: 50%;
+	margin: auto;
+	
+}
+
+
+
+a{
+	text-decoration: none !important;
+}
+
+.form-container{
+	display:block;
+	width: 50%;
+	margin: 1rem auto;
+	padding: 1rem ;
+	border: 1px solid black;
+	border-radius: 5px;
+	
+	
+}
+
+.form-container .text{
+	font-size: 2rem;
+}
+
+.keys-form label{
+	margin-right: 2rem;
+}
+
+.lesson{
+	width: 50%;
+	text-align: center;
+	display:block;
+	margin:auto;
+	margin-top: 1.5rem;
+	padding: 1rem;
+	background-color: #f0f0f0;
+	cursor: pointer;
+	text-decoration: none !important;
+	
+}
+.lesson p{
+	margin: 0;
+	font-size: 2rem;
+}
+
+
+.page-footer{
+
+
+	margin-top: 4rem;
+	background: #f0f0f0;
+	color:#337ab7 ;
+}
+
+.footer-row{
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	padding: 2rem;
+}
+
+
+.footer-content{
+	width:50%;
+}
+
+.footer-links{
+	align-content: center;
+	padding-left: 5rem;
+}
+
+
+.footer-links ul{
+	padding-left: 0;
+	list-style: none;
+}
+
+.footer-copyright{
+	text-align: center;
+}

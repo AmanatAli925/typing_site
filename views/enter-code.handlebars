@@ -1,0 +1,24 @@
+<div class="wrapper">
+	{{#if error_msg}}
+		<div class="error-msg">
+			{{error_msg}}
+		</div>
+	{{else}}
+		<div>
+			A mail was sent on your address with a code.<br>
+			Check inbox and spam folder aswell.
+		</div>
+	{{/if}}
+	
+	<form action="/forms-handling/{{endpoint}}" method="POST" class="enter-code">
+		<input hidden="true" name="email" value="{{email}}"></input>
+		
+		<input placeholder="Enter code" name="code"></input>
+		<button type="submit">Submit</button>
+		<div>
+			Didn't get the code?<a class="send-again" href="/forms-handling/send-again?email={{email}}&purpose={{endpoint}}" > Send again</a>
+		</div>
+	</form>
+</div>
+
+<link href="/css/enter-code.css" rel="stylesheet"/>

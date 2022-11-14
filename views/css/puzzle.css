@@ -1,0 +1,52 @@
+.puzzle-container{
+
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 50%;
+	padding:0;
+	margin: 0;
+}
+
+.column-tags{
+	display: flex;
+	margin: auto;
+	justify-content:center;
+
+	font-size: 1rem;
+	font-weight: 800;
+}
+.column-tags div{
+	border: 1px solid black;
+	text-align: center;
+	align-items: center;
+	
+}
+
+.row-tags{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 0;
+	font-size: 1rem;
+	font-weight: 800;
+	position: absolute;
+}
+
+.row-tags div{
+	border: 1px solid black;
+	text-align: center;
+	align-items: center;
+	
+}
+.horizontal-wraper{
+	display:flex;
+	margin: auto;
+	justify-content:center;
+}
+.puzzle-container input{
+	
+}
+
+
+div.guide-step img{
+	width: 70%;
+}

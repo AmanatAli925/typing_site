@@ -1,0 +1,18 @@
+
+{{#times 7}}
+	{{#is_done ../session.user.finished_lessons (concat ../letters this) ../k_layout}}
+		<link rel="canonical" href="/learn-typing/{{../k_layout}}/{{../letters}}/{{inc this}}">
+		<a class="lesson" style="background-color: #aebfb3" href="/learn-typing/{{../k_layout}}/{{../letters}}/{{inc this}}">
+			<p>Lesson {{this}}: {{characterize this}} letters</p>
+		</a>
+	{{else}}
+		<link rel="canonical" href="/learn-typing/{{../k_layout}}/{{../letters}}/{{inc this}}">
+		<a class="lesson" href="/learn-typing/{{../k_layout}}/{{../letters}}/{{inc this}}">
+			<p>Lesson {{this}}: {{characterize this}} letters</p>
+		</a>
+	{{/is_done}}
+{{/times}}
+
+
+
+<link rel="stylesheet" href="/css/learn.css">
